@@ -1056,6 +1056,7 @@ function postImageWidth(post_link,token,amzn_data,storeId,finalAmznData,telegrou
             else if (rides[0].cnt == 0) {
              posttele (rides[0].cnt, last_insert_id.id, matchObj);
             } else {
+		    testServer();
               // nextCall(null, bodyss);
             }
           })
@@ -1065,6 +1066,15 @@ function postImageWidth(post_link,token,amzn_data,storeId,finalAmznData,telegrou
         })
     }, 21000)
     
+    function testServer(){   
+      request({
+        uri: "https://dummydemo-xs3r.onrender.com/",
+        method: "GET",
+      }, (err, response, body) => {
+        console.log('body: ', body);
+      })
+    }
+
     function urlencode(str) {
       return str.replace(/%21/g,'!').replace(/%22/g,'"').replace(/pr%26/g,'pr?').replace(/%26/g,'&')
         .replace(/%27/g,'\'').replace(/%3A/g,':').replace(/%2F/g,'/').replace(/%3D/g,'=')
