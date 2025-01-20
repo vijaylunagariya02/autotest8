@@ -6,7 +6,6 @@ const cors = require("cors");
 // var usersRouter = require('./routes/users');
 var indexRouter = require('./routes/index');
 
-//Middleware files
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
